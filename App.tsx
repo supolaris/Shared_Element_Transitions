@@ -1,12 +1,10 @@
-import React from 'react';
 import {View, Text} from 'react-native';
+import React from 'react';
+
+import {NativeStack} from './src/routes/NativeStack';
 
 const App = () => {
-  return (
-    <View>
-      <Text>App</Text>
-    </View>
-  );
+  return <NativeStack />;
 };
 
 export default App;
