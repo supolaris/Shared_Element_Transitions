@@ -6,6 +6,11 @@ import Animated, {FadeInUp} from 'react-native-reanimated';
 
 import {useNavigation} from '@react-navigation/native';
 
+import {
+  widthPercentageToDP as wp,
+  heightPercentageToDP as hp,
+} from 'react-native-responsive-screen';
+
 const HomeScreen = () => {
   const navigation = useNavigation();
 
@@ -33,7 +38,7 @@ const HomeScreen = () => {
             <View style={{paddingLeft: 10}}>
               <Text
                 style={{
-                  fontSize: 25,
+                  fontSize: hp('3%'),
                   color: 'black',
                   fontFamily: 'Montserrat-Bold',
                 }}>
@@ -41,7 +46,7 @@ const HomeScreen = () => {
               </Text>
               <Text
                 style={{
-                  fontSize: 20,
+                  fontSize: hp('2.5%'),
                   color: 'black',
                   fontFamily: 'Montserrat-SemiBold',
                 }}>
@@ -50,7 +55,7 @@ const HomeScreen = () => {
               <Text
                 numberOfLines={1}
                 style={{
-                  fontSize: 18,
+                  fontSize: hp('2.2%'),
                   color: 'black',
                   width: '18%',
                   fontFamily: 'Montserrat-Regular',
@@ -87,9 +92,8 @@ const HomeScreen = () => {
           style={{
             flex: 1,
             width: '50%',
-            fontSize: 22,
+            fontSize: hp('3%'),
             fontFamily: 'Montserrat-BlackItalic',
-            //fontWeight: 'bold',
             color: 'black',
             textAlign: 'center',
             paddingVertical: 20,

@@ -1,6 +1,11 @@
 import React from 'react';
 import {View, Text, StatusBar, TouchableOpacity} from 'react-native';
 
+import {
+  widthPercentageToDP as wp,
+  heightPercentageToDP as hp,
+} from 'react-native-responsive-screen';
+
 import Animated, {FadeIn, FadeInLeft} from 'react-native-reanimated';
 
 import {useNavigation} from '@react-navigation/native';
