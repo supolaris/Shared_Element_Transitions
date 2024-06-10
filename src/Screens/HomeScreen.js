@@ -18,8 +18,8 @@ const HomeScreen = () => {
           }}
           style={{
             margin: 10,
-            elevation: 10,
-            shadowColor: 'blue',
+            elevation: 15,
+            shadowColor: '#1A4D2E',
             backgroundColor: 'white',
             padding: 15,
             borderRadius: 10,
@@ -31,7 +31,7 @@ const HomeScreen = () => {
               source={item.image}
             />
             <View style={{paddingLeft: 10}}>
-              <Text style={{fontSize: 30, color: 'black', fontWeight: '600'}}>
+              <Text style={{fontSize: 25, color: 'black', fontWeight: '600'}}>
                 {item.country}
               </Text>
               <Text style={{fontSize: 20, color: 'black', fontWeight: '500'}}>

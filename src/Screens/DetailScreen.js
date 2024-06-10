@@ -7,15 +7,15 @@ import {
   TouchableOpacity,
 } from 'react-native';
 
-import Animated, {FadeInLeft} from 'react-native-reanimated';
+import Animated, {FadeIn, FadeInLeft, FadeOut} from 'react-native-reanimated';
 
 const DetailScreen = ({route}) => {
   const {item} = route.params;
 
   return (
-    <View style={{flex: 1}}>
+    <View style={{flex: 1, backgroundColor: 'white'}}>
       <StatusBar barStyle="light-content" backgroundColor="black" />
-      <View style={{flex: 3}}>
+      <View style={{flex: 1}}>
         <View style={{flex: 1}}>
           <Animated.Image
             sharedTransitionTag={item.country}
@@ -31,7 +31,7 @@ const DetailScreen = ({route}) => {
               width: '90%',
               borderRadius: 10,
               position: 'absolute',
-              top: '60%',
+              top: '55%',
               left: '5%',
               backgroundColor: 'rgba(0,0,0,0.7)',
             }}>
@@ -72,9 +72,24 @@ const DetailScreen = ({route}) => {
         </View>
       </View>
 
-      <View style={{flex: 1}}>
-        <TouchableOpacity></TouchableOpacity>
-      </View>
+      <Animated.View entering={FadeIn.delay(1000)} style={{padding: 20}}>
+        <TouchableOpacity
+          style={{
+            backgroundColor: '#1A4D2E',
+            paddingVertical: 15,
+            borderRadius: 20,
+          }}>
+          <Text
+            style={{
+              fontSize: 25,
+              fontWeight: 'bold',
+              color: '#ffffff',
+              textAlign: 'center',
+            }}>
+            Select Destination
+          </Text>
+        </TouchableOpacity>
+      </Animated.View>
     </View>
   );
 };

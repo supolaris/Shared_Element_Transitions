@@ -5,6 +5,7 @@ import Screen1 from '../Screens/Screen1';
 import Screen2 from '../Screens/Screen2';
 import Screen3 from '../Screens/Screen3';
 
+import StartupScreen from '../Screens/StartupScreen';
 import HomeScreen from '../Screens/HomeScreen';
 import DetailScreen from '../Screens/DetailScreen';
 
@@ -17,6 +18,7 @@ export function NativeStack() {
         screenOptions={{
           headerShown: false,
         }}>
+        <Stack.Screen name="StartupScreen" component={StartupScreen} />
         <Stack.Screen name="HomeScreen" component={HomeScreen} />
         <Stack.Screen name="DetailScreen" component={DetailScreen} />
 
