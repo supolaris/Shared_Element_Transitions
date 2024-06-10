@@ -3,7 +3,10 @@ import {View, Text, StatusBar, TouchableOpacity} from 'react-native';
 
 import Animated, {FadeIn, FadeInLeft} from 'react-native-reanimated';
 
+import {useNavigation} from '@react-navigation/native';
+
 const DetailScreen = ({route}) => {
+  const navigation = useNavigation();
   const {item} = route.params;
 
   return (
@@ -51,6 +54,7 @@ const DetailScreen = ({route}) => {
               }}
               source={require('../Assets/Images/logo.png')}
             />
+
             <Animated.Text
               entering={FadeInLeft.delay(500)}
               style={{
@@ -80,6 +84,7 @@ const DetailScreen = ({route}) => {
 
       <Animated.View entering={FadeIn.delay(1000)} style={{padding: 20}}>
         <TouchableOpacity
+          onPress={() => navigation.navigate('CarScreen')}
           style={{
             backgroundColor: '#1A4D2E',
             paddingVertical: 15,
@@ -92,7 +97,7 @@ const DetailScreen = ({route}) => {
               color: '#ffffff',
               textAlign: 'center',
             }}>
-            Select Destination
+            Second Animation
           </Text>
         </TouchableOpacity>
       </Animated.View>

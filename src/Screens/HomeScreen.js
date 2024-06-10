@@ -2,7 +2,7 @@ import React from 'react';
 import {View, Text, StatusBar, FlatList, TouchableOpacity} from 'react-native';
 
 import {HomeFlatList} from '../components/FlatListComponents/HomeFlatList';
-import Animated, {FadeInDown} from 'react-native-reanimated';
+import Animated, {FadeInUp} from 'react-native-reanimated';
 
 import {useNavigation} from '@react-navigation/native';
 
@@ -11,7 +11,7 @@ const HomeScreen = () => {
 
   const RenderHomeFlatList = ({item, index}) => {
     return (
-      <Animated.View entering={FadeInDown.delay(200 * index)}>
+      <Animated.View entering={FadeInUp.delay(200 * index)}>
         <TouchableOpacity
           onPress={() => {
             navigation.navigate('DetailScreen', {item: item});
@@ -67,6 +67,7 @@ const HomeScreen = () => {
           }}
           source={require('../Assets/Images/logo.png')}
         />
+
         <Text
           style={{
             flex: 1,

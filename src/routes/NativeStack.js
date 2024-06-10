@@ -9,6 +9,9 @@ import StartupScreen from '../Screens/StartupScreen';
 import HomeScreen from '../Screens/HomeScreen';
 import DetailScreen from '../Screens/DetailScreen';
 
+import CarScreen from '../Screens/CarScreen';
+import CarDetail from '../Screens/CarDetail';
+
 const Stack = createNativeStackNavigator();
 
 export function NativeStack() {
@@ -19,6 +22,9 @@ export function NativeStack() {
           headerShown: false,
         }}>
         <Stack.Screen name="HomeScreen" component={HomeScreen} />
+        <Stack.Screen name="CarScreen" component={CarScreen} />
+        <Stack.Screen name="CarDetail" component={CarDetail} />
+
         <Stack.Screen name="DetailScreen" component={DetailScreen} />
         <Stack.Screen name="StartupScreen" component={StartupScreen} />
 
