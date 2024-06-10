@@ -2,31 +2,12 @@ import React from 'react';
 import {View, Text, StatusBar, FlatList, TouchableOpacity} from 'react-native';
 
 import {HomeFlatList} from '../components/FlatListComponents/HomeFlatList';
-import Animated, {
-  FadeInDown,
-  useSharedValue,
-  useAnimatedStyle,
-  withTiming,
-} from 'react-native-reanimated';
+import Animated, {FadeInDown} from 'react-native-reanimated';
 
 import {useNavigation} from '@react-navigation/native';
 
 const HomeScreen = () => {
   const navigation = useNavigation();
-
-  // const transitionValue = useSharedValue(0);
-
-  // // Set the speed limit for the transition
-  // const SPEED_LIMIT = 1000; // Adjust this value as needed
-
-  // // Animated style
-  // const animatedStyle = useAnimatedStyle(() => {
-  //   return {
-  //     transform: [
-  //       {scale: withTiming(transitionValue.value, {duration: SPEED_LIMIT})},
-  //     ],
-  //   };
-  // });
 
   const RenderHomeFlatList = ({item, index}) => {
     return (
