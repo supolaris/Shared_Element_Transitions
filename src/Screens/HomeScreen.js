@@ -2,12 +2,31 @@ import React from 'react';
 import {View, Text, StatusBar, FlatList, TouchableOpacity} from 'react-native';
 
 import {HomeFlatList} from '../components/FlatListComponents/HomeFlatList';
-import Animated, {FadeInDown} from 'react-native-reanimated';
+import Animated, {
+  FadeInDown,
+  useSharedValue,
+  useAnimatedStyle,
+  withTiming,
+} from 'react-native-reanimated';
 
 import {useNavigation} from '@react-navigation/native';
 
 const HomeScreen = () => {
   const navigation = useNavigation();
+
+  // const transitionValue = useSharedValue(0);
+
+  // // Set the speed limit for the transition
+  // const SPEED_LIMIT = 1000; // Adjust this value as needed
+
+  // // Animated style
+  // const animatedStyle = useAnimatedStyle(() => {
+  //   return {
+  //     transform: [
+  //       {scale: withTiming(transitionValue.value, {duration: SPEED_LIMIT})},
+  //     ],
+  //   };
+  // });
 
   const RenderHomeFlatList = ({item, index}) => {
     return (
@@ -52,17 +71,34 @@ const HomeScreen = () => {
   return (
     <View style={{flex: 1}}>
       <StatusBar barStyle="light-content" backgroundColor="black" />
-      <Text
+      <View
         style={{
-          fontSize: 25,
-          fontWeight: 'bold',
-          color: 'black',
-          textAlign: 'center',
-          paddingVertical: 20,
+          flexDirection: 'row',
+          alignItems: 'center',
           backgroundColor: 'white',
         }}>
-        Discover Destinations
-      </Text>
+        <Animated.Image
+          sharedTransitionTag="logoImage"
+          style={{
+            width: '50%',
+            height: 80,
+            width: 80,
+          }}
+          source={require('../Assets/Images/logo.png')}
+        />
+        <Text
+          style={{
+            flex: 1,
+            width: '50%',
+            fontSize: 25,
+            fontWeight: 'bold',
+            color: 'black',
+            textAlign: 'center',
+            paddingVertical: 20,
+          }}>
+          Discover Destinations
+        </Text>
+      </View>
       <View style={{flex: 1, paddingVertical: 10}}>
         <FlatList
           data={HomeFlatList}

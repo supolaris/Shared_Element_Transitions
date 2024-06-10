@@ -1,13 +1,7 @@
 import React from 'react';
-import {
-  View,
-  Text,
-  StyleSheet,
-  StatusBar,
-  TouchableOpacity,
-} from 'react-native';
+import {View, Text, StatusBar, TouchableOpacity} from 'react-native';
 
-import Animated, {FadeIn, FadeInLeft, FadeOut} from 'react-native-reanimated';
+import Animated, {FadeIn, FadeInLeft} from 'react-native-reanimated';
 
 const DetailScreen = ({route}) => {
   const {item} = route.params;
@@ -47,18 +41,30 @@ const DetailScreen = ({route}) => {
             borderTopRightRadius: 20,
             backgroundColor: '#ffffff',
           }}>
-          <Animated.Text
-            entering={FadeInLeft.delay(500)}
-            style={{
-              fontSize: 40,
-              color: 'black',
-              fontWeight: 'bold',
-              paddingTop: 20,
-              paddingBottom: 5,
-              borderBottomWidth: 0.5,
-            }}>
-            Description
-          </Animated.Text>
+          <View style={{flexDirection: 'row', alignItems: 'center'}}>
+            <Animated.Image
+              sharedTransitionTag="logoImage"
+              style={{
+                width: '50%',
+                height: 200,
+                width: 200,
+              }}
+              source={require('../Assets/Images/logo.png')}
+            />
+            <Animated.Text
+              entering={FadeInLeft.delay(500)}
+              style={{
+                fontSize: 30,
+                color: 'black',
+                fontWeight: 'bold',
+                paddingTop: 20,
+                paddingBottom: 5,
+                borderBottomWidth: 0.5,
+              }}>
+              Description
+            </Animated.Text>
+          </View>
+
           <Animated.Text
             entering={FadeInLeft.delay(700)}
             style={{

@@ -1,15 +1,9 @@
 import React from 'react';
-import {
-  View,
-  Text,
-  TouchableOpacity,
-  Dimensions,
-  StatusBar,
-} from 'react-native';
+import {View, Text, TouchableOpacity, StatusBar} from 'react-native';
 
 import Video from 'react-native-video';
 
-import Animated, {FadeIn, FadeInUp} from 'react-native-reanimated';
+import Animated, {FadeInUp} from 'react-native-reanimated';
 
 import {useNavigation} from '@react-navigation/native';
 
@@ -20,11 +14,12 @@ const StartupScreen = () => {
 
   return (
     <View style={{flex: 1}}>
-      <StatusBar
+      {/* <StatusBar
         translucent
         barStyle="light-content"
         backgroundColor="transparent"
-      />
+      /> */}
+      <StatusBar barStyle="light-content" backgroundColor="black" />
       <Video
         style={{
           flex: 1,

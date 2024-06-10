@@ -18,9 +18,9 @@ export function NativeStack() {
         screenOptions={{
           headerShown: false,
         }}>
-        <Stack.Screen name="StartupScreen" component={StartupScreen} />
         <Stack.Screen name="HomeScreen" component={HomeScreen} />
         <Stack.Screen name="DetailScreen" component={DetailScreen} />
+        <Stack.Screen name="StartupScreen" component={StartupScreen} />
 
         <Stack.Screen name="Screen2" component={Screen2} />
         <Stack.Screen name="Screen3" component={Screen3} />
