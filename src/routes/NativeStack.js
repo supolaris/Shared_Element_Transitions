@@ -19,6 +19,7 @@ export function NativeStack() {
         }}>
         <Stack.Screen name="HomeScreen" component={HomeScreen} />
         <Stack.Screen name="DetailScreen" component={DetailScreen} />
+
         <Stack.Screen name="Screen2" component={Screen2} />
         <Stack.Screen name="Screen3" component={Screen3} />
         <Stack.Screen name="Screen1" component={Screen1} />

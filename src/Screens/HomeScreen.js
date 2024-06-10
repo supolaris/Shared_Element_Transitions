@@ -1,24 +1,32 @@
 import React from 'react';
-import {View, Text, StyleSheet, FlatList, Pressable, Image} from 'react-native';
+import {View, Text, StatusBar, FlatList, TouchableOpacity} from 'react-native';
 
 import {HomeFlatList} from '../components/FlatListComponents/HomeFlatList';
-import Animated, {FadeIn, FadeInDown} from 'react-native-reanimated';
+import Animated, {FadeInDown} from 'react-native-reanimated';
+
+import {useNavigation} from '@react-navigation/native';
 
 const HomeScreen = () => {
+  const navigation = useNavigation();
+
   const RenderHomeFlatList = ({item, index}) => {
     return (
       <Animated.View entering={FadeInDown.delay(200 * index)}>
-        <Pressable
+        <TouchableOpacity
+          onPress={() => {
+            navigation.navigate('DetailScreen', {item: item});
+          }}
           style={{
             margin: 10,
             elevation: 10,
             shadowColor: 'blue',
             backgroundColor: 'white',
-            padding: 20,
+            padding: 15,
             borderRadius: 10,
           }}>
           <View style={{flexDirection: 'row'}}>
-            <Image
+            <Animated.Image
+              sharedTransitionTag={item.country}
               style={{height: 100, width: 100, borderRadius: 10}}
               source={item.image}
             />
@@ -36,13 +44,14 @@ const HomeScreen = () => {
               </Text>
             </View>
           </View>
-        </Pressable>
+        </TouchableOpacity>
       </Animated.View>
     );
   };
 
   return (
     <View style={{flex: 1}}>
+      <StatusBar barStyle="light-content" backgroundColor="black" />
       <Text
         style={{
           fontSize: 25,
@@ -54,7 +63,7 @@ const HomeScreen = () => {
         }}>
         Discover Destinations
       </Text>
-      <View style={{flex: 1}}>
+      <View style={{flex: 1, paddingVertical: 10}}>
         <FlatList
           data={HomeFlatList}
           renderItem={RenderHomeFlatList}
