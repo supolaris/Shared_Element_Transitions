@@ -31,15 +31,30 @@ const HomeScreen = () => {
               source={item.image}
             />
             <View style={{paddingLeft: 10}}>
-              <Text style={{fontSize: 25, color: 'black', fontWeight: '600'}}>
+              <Text
+                style={{
+                  fontSize: 25,
+                  color: 'black',
+                  fontFamily: 'Montserrat-Bold',
+                }}>
                 {item.country}
               </Text>
-              <Text style={{fontSize: 20, color: 'black', fontWeight: '500'}}>
+              <Text
+                style={{
+                  fontSize: 20,
+                  color: 'black',
+                  fontFamily: 'Montserrat-SemiBold',
+                }}>
                 {item.city}
               </Text>
               <Text
                 numberOfLines={1}
-                style={{fontSize: 18, color: 'black', width: '20%'}}>
+                style={{
+                  fontSize: 18,
+                  color: 'black',
+                  width: '18%',
+                  fontFamily: 'Montserrat-Regular',
+                }}>
                 {item.description}
               </Text>
             </View>
@@ -72,8 +87,9 @@ const HomeScreen = () => {
           style={{
             flex: 1,
             width: '50%',
-            fontSize: 25,
-            fontWeight: 'bold',
+            fontSize: 22,
+            fontFamily: 'Montserrat-BlackItalic',
+            //fontWeight: 'bold',
             color: 'black',
             textAlign: 'center',
             paddingVertical: 20,
