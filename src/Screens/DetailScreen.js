@@ -58,9 +58,9 @@ const DetailScreen = ({route}) => {
             <Animated.Text
               entering={FadeInLeft.delay(500)}
               style={{
-                fontSize: 30,
+                fontSize: 25,
                 color: 'black',
-                fontWeight: 'bold',
+                fontFamily: 'Montserrat-BlackItalic',
                 paddingTop: 20,
                 paddingBottom: 5,
                 borderBottomWidth: 0.5,
@@ -73,9 +73,10 @@ const DetailScreen = ({route}) => {
             entering={FadeInLeft.delay(700)}
             style={{
               fontSize: 20,
-              fontWeight: 'bold',
+              //fontWeight: 'bold',
               color: 'black',
               paddingTop: 20,
+              fontFamily: 'Montserrat-SemiBold',
             }}>
             {item.description}
           </Animated.Text>
