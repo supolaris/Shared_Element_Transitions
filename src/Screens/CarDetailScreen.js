@@ -2,6 +2,7 @@ import React from 'react';
 import {View, Text, Pressable, StyleSheet} from 'react-native';
 
 import {AppFonts} from '../Assets/Constants/Fonts';
+import {AppColors} from '../Assets/Constants/Colors';
 
 import Animated from 'react-native-reanimated';
 
@@ -45,19 +46,19 @@ export default CarDetailScreen;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'white',
+    backgroundColor: AppColors.White,
   },
   carNameText: {
     fontSize: 20,
     fontFamily: AppFonts.Black,
-    color: 'black',
+    color: AppColors.Black,
     paddingTop: 20,
     paddingLeft: 10,
   },
   carDescriptionText: {
     fontSize: 16,
     fontFamily: AppFonts.Medium,
-    color: 'black',
+    color: AppColors.Black,
     paddingLeft: 10,
   },
   carImageView: {
@@ -71,14 +72,14 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   pressable: {
-    backgroundColor: 'gray',
+    backgroundColor: AppColors.Gray,
     width: '60%',
     borderRadius: 20,
     paddingVertical: 10,
   },
   pressableText: {
     fontSize: 18,
-    color: 'white',
+    color: AppColors.White,
     textAlign: 'center',
   },
 });

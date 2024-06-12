@@ -2,6 +2,7 @@ import React from 'react';
 import {View, Pressable, SafeAreaView, StyleSheet} from 'react-native';
 
 import {AppFonts} from '../Assets/Constants/Fonts';
+import {AppColors} from '../Assets/Constants/Colors';
 
 import {useAppNavigation} from '../@types/AppNavigation';
 
@@ -51,20 +52,20 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   textImageView: {
-    backgroundColor: 'gray',
+    backgroundColor: AppColors.Gray,
     height: 200,
   },
   carNameText: {
     fontSize: 30,
     fontFamily: AppFonts.Bold,
-    color: 'black',
+    color: AppColors.Black,
     paddingTop: 20,
     paddingLeft: 10,
   },
   carDescriptionText: {
     fontSize: 20,
     fontFamily: AppFonts.Medium,
-    color: 'black',
+    color: AppColors.Black,
     paddingLeft: 10,
   },
   carImage: {

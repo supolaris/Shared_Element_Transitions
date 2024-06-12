@@ -9,6 +9,7 @@ import {
 } from 'react-native';
 
 import {AppFonts} from '../Assets/Constants/Fonts';
+import {AppColors} from '../Assets/Constants/Colors';
 
 import {HomeFlatList} from '../components/FlatListComponents/HomeFlatList';
 import Animated, {FadeInUp} from 'react-native-reanimated';
@@ -74,8 +75,8 @@ const styles = StyleSheet.create({
   flatListTouchable: {
     margin: 10,
     elevation: 15,
-    shadowColor: '#1A4D2E',
-    backgroundColor: 'white',
+    shadowColor: AppColors.DarkGreen,
+    backgroundColor: AppColors.White,
     padding: 15,
     borderRadius: 10,
   },
@@ -92,17 +93,17 @@ const styles = StyleSheet.create({
   },
   flatListCountryText: {
     fontSize: 22,
-    color: 'black',
+    color: AppColors.Black,
     fontFamily: AppFonts.Bold,
   },
   flatListCityText: {
     fontSize: 18,
-    color: 'black',
+    color: AppColors.Black,
     fontFamily: AppFonts.SemiBold,
   },
   flatListDescriptionText: {
     fontSize: 16,
-    color: 'black',
+    color: AppColors.Black,
     width: '18%',
     fontFamily: AppFonts.Regular,
   },

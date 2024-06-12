@@ -8,6 +8,7 @@ import {
 } from 'react-native';
 
 import {AppFonts} from '../Assets/Constants/Fonts';
+import {AppColors} from '../Assets/Constants/Colors';
 
 import Video from 'react-native-video';
 
@@ -78,7 +79,7 @@ const styles = StyleSheet.create({
   },
   infoInnerView: {
     paddingTop: 20,
-    backgroundColor: '#ffffff',
+    backgroundColor: AppColors.White,
     height: '35%',
     margin: 10,
     marginTop: 35,
@@ -90,7 +91,7 @@ const styles = StyleSheet.create({
     fontFamily: AppFonts.Bold,
 
     fontSize: 25,
-    color: '#1A4D2E',
+    color: AppColors.DarkGreen,
     paddingHorizontal: 10,
     paddingBottom: 10,
     borderBottomWidth: 0.5,
@@ -99,7 +100,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontFamily: AppFonts.Bold,
     fontSize: 18,
-    color: '#1A4D2E',
+    color: AppColors.DarkGreen,
     paddingTop: 10,
     paddingHorizontal: 10,
   },
@@ -107,14 +108,14 @@ const styles = StyleSheet.create({
     padding: 20,
   },
   touchable: {
-    backgroundColor: '#1A4D2E',
+    backgroundColor: AppColors.DarkGreen,
     paddingVertical: 10,
     borderRadius: 20,
   },
   touchableText: {
     fontSize: 25,
     fontFamily: AppFonts.Bold,
-    color: '#ffffff',
+    color: AppColors.White,
     textAlign: 'center',
   },
 });

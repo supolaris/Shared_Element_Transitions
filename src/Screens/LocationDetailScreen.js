@@ -8,6 +8,7 @@ import {
 } from 'react-native';
 
 import {AppFonts} from '../Assets/Constants/Fonts';
+import {AppColors} from '../Assets/Constants/Colors';
 
 import Animated, {FadeIn, FadeInLeft} from 'react-native-reanimated';
 
@@ -74,7 +75,7 @@ export default LocationDetailScreen;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'white',
+    backgroundColor: AppColors.White,
   },
   outerView: {
     flex: 1,
@@ -94,22 +95,22 @@ const styles = StyleSheet.create({
     position: 'absolute',
     bottom: 10,
     alignSelf: 'center',
-    backgroundColor: 'rgba(0,0,0,0.7)',
+    backgroundColor: AppColors.TransparentBlack,
   },
   countryText: {
     fontSize: 30,
-    color: 'white',
+    color: AppColors.White,
   },
   cityText: {
     fontSize: 20,
-    color: 'white',
+    color: AppColors.White,
   },
   logoTitleDescriptionView: {
     flex: 1.5,
     paddingHorizontal: 15,
     borderTopLeftRadius: 20,
     borderTopRightRadius: 20,
-    backgroundColor: '#ffffff',
+    backgroundColor: AppColors.White,
   },
   logoDescriptionView: {
     flexDirection: 'row',
@@ -121,7 +122,7 @@ const styles = StyleSheet.create({
   },
   titleText: {
     fontSize: 25,
-    color: 'black',
+    color: AppColors.Black,
     fontFamily: AppFonts.BlackItalic,
     paddingTop: 20,
     paddingBottom: 5,
@@ -129,19 +130,19 @@ const styles = StyleSheet.create({
   },
   descriptionText: {
     fontSize: 20,
-    color: 'black',
+    color: AppColors.Black,
     paddingTop: 20,
     fontFamily: AppFonts.SemiBold,
   },
   touchable: {
-    backgroundColor: '#1A4D2E',
+    backgroundColor: AppColors.DarkGreen,
     paddingVertical: 15,
     borderRadius: 20,
   },
   touchableText: {
     fontSize: 25,
     fontFamily: AppFonts.Bold,
-    color: '#ffffff',
+    color: AppColors.White,
     textAlign: 'center',
   },
 });
