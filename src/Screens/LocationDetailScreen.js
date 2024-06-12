@@ -7,6 +7,8 @@ import {
   StyleSheet,
 } from 'react-native';
 
+import {AppFonts} from '../Assets/Constants/Fonts';
+
 import Animated, {FadeIn, FadeInLeft} from 'react-native-reanimated';
 
 import {useAppNavigation} from '../@types/AppNavigation';
@@ -120,7 +122,7 @@ const styles = StyleSheet.create({
   titleText: {
     fontSize: 25,
     color: 'black',
-    fontFamily: 'Montserrat-BlackItalic',
+    fontFamily: AppFonts.BlackItalic,
     paddingTop: 20,
     paddingBottom: 5,
     borderBottomWidth: 0.5,
@@ -129,7 +131,7 @@ const styles = StyleSheet.create({
     fontSize: 20,
     color: 'black',
     paddingTop: 20,
-    fontFamily: 'Montserrat-SemiBold',
+    fontFamily: AppFonts.SemiBold,
   },
   touchable: {
     backgroundColor: '#1A4D2E',
@@ -138,7 +140,7 @@ const styles = StyleSheet.create({
   },
   touchableText: {
     fontSize: 25,
-    fontFamily: 'Montserrat-Bold',
+    fontFamily: AppFonts.Bold,
     color: '#ffffff',
     textAlign: 'center',
   },

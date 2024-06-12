@@ -1,6 +1,8 @@
 import React from 'react';
 import {View, Text, Pressable, StyleSheet} from 'react-native';
 
+import {AppFonts} from '../Assets/Constants/Fonts';
+
 import Animated from 'react-native-reanimated';
 
 import {useAppNavigation} from '../@types/AppNavigation';
@@ -47,14 +49,14 @@ const styles = StyleSheet.create({
   },
   carNameText: {
     fontSize: 20,
-    fontFamily: 'Montserrat-Black',
+    fontFamily: AppFonts.Black,
     color: 'black',
     paddingTop: 20,
     paddingLeft: 10,
   },
   carDescriptionText: {
     fontSize: 16,
-    fontFamily: 'Montserrat-Medium',
+    fontFamily: AppFonts.Medium,
     color: 'black',
     paddingLeft: 10,
   },

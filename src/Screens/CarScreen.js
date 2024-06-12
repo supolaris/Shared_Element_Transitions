@@ -1,6 +1,8 @@
 import React from 'react';
 import {View, Pressable, SafeAreaView, StyleSheet} from 'react-native';
 
+import {AppFonts} from '../Assets/Constants/Fonts';
+
 import {useAppNavigation} from '../@types/AppNavigation';
 
 import Animated, {FadeInLeft, FadeInRight} from 'react-native-reanimated';
@@ -54,14 +56,14 @@ const styles = StyleSheet.create({
   },
   carNameText: {
     fontSize: 30,
-    fontFamily: 'Montserrat-Bold',
+    fontFamily: AppFonts.Bold,
     color: 'black',
     paddingTop: 20,
     paddingLeft: 10,
   },
   carDescriptionText: {
     fontSize: 20,
-    fontFamily: 'Montserrat-Medium',
+    fontFamily: AppFonts.Medium,
     color: 'black',
     paddingLeft: 10,
   },

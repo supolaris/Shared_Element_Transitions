@@ -8,6 +8,8 @@ import {
   StyleSheet,
 } from 'react-native';
 
+import {AppFonts} from '../Assets/Constants/Fonts';
+
 import {HomeFlatList} from '../components/FlatListComponents/HomeFlatList';
 import Animated, {FadeInUp} from 'react-native-reanimated';
 
@@ -91,18 +93,18 @@ const styles = StyleSheet.create({
   flatListCountryText: {
     fontSize: 22,
     color: 'black',
-    fontFamily: 'Montserrat-Bold',
+    fontFamily: AppFonts.Bold,
   },
   flatListCityText: {
     fontSize: 18,
     color: 'black',
-    fontFamily: 'Montserrat-SemiBold',
+    fontFamily: AppFonts.SemiBold,
   },
   flatListDescriptionText: {
     fontSize: 16,
     color: 'black',
     width: '18%',
-    fontFamily: 'Montserrat-Regular',
+    fontFamily: AppFonts.Regular,
   },
 
   container: {
@@ -121,7 +123,7 @@ const styles = StyleSheet.create({
     flex: 1,
     width: '50%',
     fontSize: 23,
-    fontFamily: 'Montserrat-BlackItalic',
+    fontFamily: AppFonts.BlackItalic,
     color: 'black',
     textAlign: 'center',
     paddingVertical: 20,

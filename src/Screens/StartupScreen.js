@@ -7,6 +7,8 @@ import {
   StyleSheet,
 } from 'react-native';
 
+import {AppFonts} from '../Assets/Constants/Fonts';
+
 import Video from 'react-native-video';
 
 import Animated, {FadeInUp} from 'react-native-reanimated';
@@ -85,7 +87,8 @@ const styles = StyleSheet.create({
   },
   descriptionText: {
     textAlign: 'center',
-    fontFamily: 'Montserrat-Bold',
+    fontFamily: AppFonts.Bold,
+
     fontSize: 25,
     color: '#1A4D2E',
     paddingHorizontal: 10,
@@ -94,7 +97,7 @@ const styles = StyleSheet.create({
   },
   subDescriptionText: {
     textAlign: 'center',
-    fontFamily: 'Montserrat-Bold',
+    fontFamily: AppFonts.Bold,
     fontSize: 18,
     color: '#1A4D2E',
     paddingTop: 10,
@@ -110,7 +113,7 @@ const styles = StyleSheet.create({
   },
   touchableText: {
     fontSize: 25,
-    fontFamily: 'Montserrat-Bold',
+    fontFamily: AppFonts.Bold,
     color: '#ffffff',
     textAlign: 'center',
   },
