@@ -1,56 +1,35 @@
 import React from 'react';
-import {View, Pressable, SafeAreaView} from 'react-native';
+import {View, Pressable, SafeAreaView, StyleSheet} from 'react-native';
 
-import {useNavigation} from '@react-navigation/native';
+import {useAppNavigation} from '../@types/AppNavigation';
 
 import Animated, {FadeInLeft, FadeInRight} from 'react-native-reanimated';
 
 const CarScreen = () => {
-  const navigation = useNavigation();
+  const navigation = useAppNavigation();
   return (
-    <SafeAreaView style={{flex: 1}}>
+    <SafeAreaView style={styles.container}>
       <Pressable
-        onPress={() => navigation.navigate('CarDetail')}
-        style={{flex: 1, justifyContent: 'center'}}>
-        <View
-          style={{
-            backgroundColor: 'gray',
-            height: 200,
-          }}>
+        onPress={() => navigation.navigate('CarDetailScreen')}
+        style={styles.pressable}>
+        <View style={styles.textImageView}>
           <Animated.Text
             entering={FadeInLeft.delay(300)}
             sharedTransitionTag="carName"
-            style={{
-              fontSize: 30,
-              fontWeight: '600',
-              color: 'black',
-              paddingTop: 20,
-              paddingLeft: 10,
-            }}>
+            style={styles.carNameText}>
             Ford Mustang
           </Animated.Text>
           <Animated.Text
             entering={FadeInLeft.delay(500)}
             sharedTransitionTag="carDetail"
-            style={{
-              fontSize: 20,
-              fontWeight: '500',
-              color: 'black',
-              paddingLeft: 10,
-            }}>
+            style={styles.carDescriptionText}>
             Muscle Car
           </Animated.Text>
           <Animated.Image
             entering={FadeInRight.delay(700)}
             sharedTransitionTag="carImage"
             resizeMode="contain"
-            style={{
-              height: 450,
-              width: 450,
-              position: 'absolute',
-              top: -100,
-              right: -150,
-            }}
+            style={styles.carImage}
             source={require('../Assets/Images/car.png')}
           />
         </View>
@@ -60,3 +39,37 @@ const CarScreen = () => {
 };
 
 export default CarScreen;
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+  pressable: {
+    flex: 1,
+    justifyContent: 'center',
+  },
+  textImageView: {
+    backgroundColor: 'gray',
+    height: 200,
+  },
+  carNameText: {
+    fontSize: 30,
+    fontFamily: 'Montserrat-Bold',
+    color: 'black',
+    paddingTop: 20,
+    paddingLeft: 10,
+  },
+  carDescriptionText: {
+    fontSize: 20,
+    fontFamily: 'Montserrat-Medium',
+    color: 'black',
+    paddingLeft: 10,
+  },
+  carImage: {
+    height: 450,
+    width: 450,
+    position: 'absolute',
+    top: -100,
+    right: -150,
+  },
+});

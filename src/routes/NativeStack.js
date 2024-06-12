@@ -1,16 +1,13 @@
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {NavigationContainer} from '@react-navigation/native';
 
-import Screen1 from '../Screens/Screen1';
-import Screen2 from '../Screens/Screen2';
-import Screen3 from '../Screens/Screen3';
-
 import StartupScreen from '../Screens/StartupScreen';
-import HomeScreen from '../Screens/HomeScreen';
-import DetailScreen from '../Screens/DetailScreen';
+
+import LocationScreen from '../Screens/LocationScreen';
+import LocationDetailScreen from '../Screens/LocationDetailScreen';
 
 import CarScreen from '../Screens/CarScreen';
-import CarDetail from '../Screens/CarDetail';
+import CarDetailScreen from '../Screens/CarDetailScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -21,16 +18,14 @@ export function NativeStack() {
         screenOptions={{
           headerShown: false,
         }}>
-        <Stack.Screen name="HomeScreen" component={HomeScreen} />
-        <Stack.Screen name="CarScreen" component={CarScreen} />
-        <Stack.Screen name="CarDetail" component={CarDetail} />
-
-        <Stack.Screen name="DetailScreen" component={DetailScreen} />
         <Stack.Screen name="StartupScreen" component={StartupScreen} />
-
-        <Stack.Screen name="Screen2" component={Screen2} />
-        <Stack.Screen name="Screen3" component={Screen3} />
-        <Stack.Screen name="Screen1" component={Screen1} />
+        <Stack.Screen name="LocationScreen" component={LocationScreen} />
+        <Stack.Screen
+          name="LocationDetailScreen"
+          component={LocationDetailScreen}
+        />
+        <Stack.Screen name="CarScreen" component={CarScreen} />
+        <Stack.Screen name="CarDetailScreen" component={CarDetailScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
