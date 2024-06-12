@@ -7,7 +7,7 @@ import {
   StyleSheet,
 } from 'react-native';
 
-import {AppFonts} from '../Assets/Constants/Fonts';
+import {AppFonts} from '../Assets/FontFamily/Fonts';
 import {AppColors} from '../Assets/Constants/Colors';
 
 import Video from 'react-native-video';
