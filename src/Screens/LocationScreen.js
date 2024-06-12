@@ -1,9 +1,9 @@
 import {View, Text} from 'react-native';
 import React from 'react';
 
-import Location from '../components/FlatListComponents/Location';
+import Location from '../components/Ui/Location';
 
-import {HomeFlatList} from '../components/FlatListComponents/HomeFlatList';
+import {HomeFlatList} from '../Assets/FlatListData/HomeFlatList';
 
 import {useNavigation} from '@react-navigation/native';
 

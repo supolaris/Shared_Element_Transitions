@@ -1,6 +1,6 @@
 import React from 'react';
 
-import LocationDetail from '../components/FlatListComponents/LocationDetail';
+import LocationDetail from '../components/Ui/LocationDetail';
 
 import {useNavigation} from '@react-navigation/native';
 

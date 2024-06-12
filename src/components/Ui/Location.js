@@ -11,7 +11,7 @@ import {
 import {AppFonts} from '../../Assets/FontFamily/Fonts';
 import {AppColors} from '../../Assets/Constants/Colors';
 
-import {HomeFlatList} from './HomeFlatList';
+import {HomeFlatList} from '../../Assets/FlatListData/HomeFlatList';
 import Animated, {FadeInUp} from 'react-native-reanimated';
 
 const Location = props => {

@@ -4,18 +4,12 @@ import {View, Pressable, SafeAreaView, StyleSheet} from 'react-native';
 import {AppFonts} from '../../Assets/FontFamily/Fonts';
 import {AppColors} from '../../Assets/Constants/Colors';
 
-
-import {useNavigation} from '@react-navigation/native';
-
 import Animated, {FadeInLeft, FadeInRight} from 'react-native-reanimated';
 
-const Car = () => {
-  const navigation = useNavigation();
+const Car = props => {
   return (
     <SafeAreaView style={styles.container}>
-      <Pressable
-        onPress={() => navigation.navigate('CarDetailScreen')}
-        style={styles.pressable}>
+      <Pressable onPress={props.onCarDetailPressed} style={styles.pressable}>
         <View style={styles.textImageView}>
           <Animated.Text
             entering={FadeInLeft.delay(300)}
