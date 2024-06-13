@@ -1,22 +1,21 @@
 import {createContext, useState} from 'react';
 
-export const ThemeContext = createContext();
+export default AppContext = createContext({
+  appDarkThemeVal: false,
+  appDarkThemeFun: () => {},
+});
 
-export const ThemeContextProvider = ({children}) => {
-  const [lightDarkTheme, setLightDarkTheme] = useState('Light');
+export const AppContextProvider = ({children}) => {
+  const [isDark, setIsDark] = useState(false);
 
-  const themeModeHandler = themeMode => {
-    setLightDarkTheme(themeMode);
+  const DarkTheme = darkTheme => {
+    setIsDark(darkTheme);
   };
 
-  const valuesLinking = {
-    lightDarkTheme,
-    themeModeHandler,
+  const values = {
+    appDarkTheme: isDark,
+    appDarkThemeFun: DarkTheme,
   };
 
-  return (
-    <ThemeContext.Provider value={valuesLinking}>
-      {children}
-    </ThemeContext.Provider>
-  );
+  return <AppContext.Provider value={values}>{children}</AppContext.Provider>;
 };

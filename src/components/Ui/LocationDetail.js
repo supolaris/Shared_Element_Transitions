@@ -10,8 +10,6 @@ import {
 import {AppFonts} from '../../Assets/FontFamily/Fonts';
 import {AppColors} from '../../Assets/Constants/Colors';
 
-import {useNavigation} from '@react-navigation/native';
-
 import Animated, {FadeIn, FadeInLeft} from 'react-native-reanimated';
 
 const LocationDetail = ({item, ...props}) => {
