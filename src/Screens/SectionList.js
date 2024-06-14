@@ -71,9 +71,10 @@ let arr1 = [
   },
 ];
 const SectionListScreen = () => {
+  const [sectionListData, setSectionListData] = useState([]);
+
   useEffect(() => {
     sortData();
-    console.log(arr1);
   }, []);
 
   const sortData = () => {
@@ -88,31 +89,34 @@ const SectionListScreen = () => {
         }
       }
     }
+    setSectionListData(arr1);
   };
 
   const renderSection = ({section}) => (
-    <View>
-      <Text style={{fontSize: 25, color: 'black'}}>{section.date}</Text>
-      <Text style={{fontSize: 20, color: 'black'}}>
+    <View style={styles.renderSectionView}>
+      <Text style={styles.dateText}>{section.date}</Text>
+
+      <View style={styles.detailView}>
         {section.data.map(item => (
-          <Text key={item.index} style={{fontSize: 20, color: 'black'}}>
-            {item.amount}
+          <Text style={{fontSize: 20, color: 'black'}}>
+            Amount: {item.amount}
+            {'\n'}
+            Price: {item.price}
+            {'\n'}
+            Tax: {item.tax}
+            {'\n'}
           </Text>
         ))}
-      </Text>
+      </View>
     </View>
   );
 
   return (
-    <View style={{flex: 1}}>
-      <Text>SectionList</Text>
-      <Pressable
-        onPress={sortData}
-        style={{backgroundColor: 'red'}}></Pressable>
-      <View>
+    <View style={styles.container}>
+      <View style={styles.sectionListView}>
         <SectionList
-          sections={arr1}
-          renderItem={({item}) => <Text>hello</Text>}
+          sections={sectionListData}
+          renderItem={({item}) => <Text>{item.date}kdfslkfl</Text>}
           keyExtractor={(item, index) => index.toString()}
           renderSectionHeader={renderSection}
         />
@@ -122,3 +126,28 @@ const SectionListScreen = () => {
 };
 
 export default SectionListScreen;
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: 'white',
+  },
+  sectionListView: {
+    flex: 1,
+    paddingTop: 40,
+  },
+
+  renderSectionView: {
+    flex: 1,
+  },
+  dateText: {
+    backgroundColor: 'gray',
+    fontSize: 25,
+    color: 'red',
+  },
+  detailView: {
+    backgroundColor: 'green',
+    // marginTop: 10,
+    //paddingVertical: 20,
+  },
+});
