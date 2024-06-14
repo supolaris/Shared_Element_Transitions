@@ -2,6 +2,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {NavigationContainer} from '@react-navigation/native';
 
 import StartupScreen from '../Screens/StartupScreen';
+import SectionListScreen from '../Screens/SectionList';
 
 import LocationScreen from '../Screens/LocationScreen';
 import LocationDetailScreen from '../Screens/LocationDetailScreen';
@@ -18,6 +19,7 @@ export function NativeStack() {
         screenOptions={{
           headerShown: false,
         }}>
+        <Stack.Screen name="SectionListScreen" component={SectionListScreen} />
         {/* <Stack.Screen name="StartupScreen" component={StartupScreen} /> */}
         <Stack.Screen name="LocationScreen" component={LocationScreen} />
         <Stack.Screen
