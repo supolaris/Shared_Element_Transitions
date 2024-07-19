@@ -937,6 +937,11 @@
 "@eslint/js@8.57.0":
   version "8.57.0"
 
+"@faker-js/faker@^8.4.1":
+  version "8.4.1"
+  resolved "https://registry.npmjs.org/@faker-js/faker/-/faker-8.4.1.tgz"
+  integrity sha512-XQ3cU+Q8Uqmrbf2e0cIC/QN43sTBSC8KF12u29Mb47tWrt2hAgBXSgpZMj4Ao8Uk0iJcU99QsOCaIL8934obCg==
+
 "@hapi/hoek@^9.0.0", "@hapi/hoek@^9.3.0":
   version "9.3.0"
 
@@ -1577,6 +1582,11 @@
   dependencies:
     "@babel/types" "^7.20.7"
 
+"@types/chroma-js@^2.4.4":
+  version "2.4.4"
+  resolved "https://registry.npmjs.org/@types/chroma-js/-/chroma-js-2.4.4.tgz"
+  integrity sha512-/DTccpHTaKomqussrn+ciEvfW4k6NAHzNzs/sts1TCqg333qNxOhy8TNIoQCmbGG3Tl8KdEhkGAssb1n3mTXiQ==
+
 "@types/graceful-fs@^4.1.3":
   version "4.1.9"
   dependencies:
@@ -2111,6 +2121,11 @@ chalk@^4.0.0, chalk@^4.1.0, chalk@^4.1.2:
 
 char-regex@^1.0.2:
   version "1.0.2"
+
+chroma-js@^2.4.2:
+  version "2.4.2"
+  resolved "https://registry.npmjs.org/chroma-js/-/chroma-js-2.4.2.tgz"
+  integrity sha512-U9eDw6+wt7V8z5NncY2jJfZa+hUH8XEj8FQHgFJTrUFnJfXYf4Ml4adI2vXZOjqRDpFWtYVWypDfZwnJ+HIR4A==
 
 chrome-launcher@^0.15.2:
   version "0.15.2"
